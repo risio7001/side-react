@@ -1,14 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './route/Router';
+
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <div className=""></div>
-    </div>
+    <BrowserRouter>
+      <RecoilRoot>
+        <Router />
+      </RecoilRoot>
+    </BrowserRouter>
   );
 }
 
