@@ -22,13 +22,11 @@ const Card = () => {
     }
 
     return <>
-        <ListLayout>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                {dummy.map((el: any, index: number) => (
-                    <CardItem key={index} data={index} />
-                ))}
-            </div>
-        </ListLayout>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {dummy.map((el: any, index: number) => (
+                <CardItem key={index} data={index} />
+            ))}
+        </div>
     </>
 
 }

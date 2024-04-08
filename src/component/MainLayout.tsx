@@ -1,17 +1,21 @@
 import React from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
-interface MainProps{
-    title:string;
-    icon?:any;
-    rest?:any;
+interface MainProps {
+    title: string;
+    icon?: any;
+    rest?: any;
 }
 
-const MainLayout:React.FC<React.PropsWithChildren> = ({children}, data:MainProps) => {
+const MainLayout: React.FC<React.PropsWithChildren> = ({ children }, data: MainProps) => {
 
-    return<>
+    return <>
+        <Header />
         <div className="p-8">
             {children}
         </div>
+        <Footer />
     </>
 }
 
